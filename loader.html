@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .square {
+            background-color: #555;
+            height: 10px;
+            width: 10px;
+            margin: 56px;
+            position: relative;
+            float: left;
+        }
+
+        .active {
+            background-color: yellow;
+        }
+    </style>
+    <script type="text/javascript">
+
+        let count = 1;
+        setInterval(() => {
+            if (count === 10) {
+                count = 1;
+            }
+            else {
+                count++;
+
+            }
+            for (let i = 1; i < 11; i++) {
+                if (i == count) {
+                    document.getElementById(i.toString()).style.backgroundColor = 'yellow';
+                }
+                else {
+                    document.getElementById(i.toString()).style.backgroundColor = '#555';
+                }
+            }
+
+        }, 300);
+    </script>
+</head>
+
+<body>
+    <div>
+        <div class='square' id='1'></div>
+        <div class='square' id='2'>
+        </div>
+        <div class='square' id='3'>
+        </div>
+        <div class='square' id='4'>
+        </div>
+        <div class='square' id='5'>
+        </div>
+        <div class='square' id='6'>
+        </div>
+        <div class='square' id='7'>
+        </div>
+        <div class='square' id='8'>
+        </div>
+        <div class='square' id='9'>
+        </div>
+        <div class='square' id='10'>
+        </div>
+    </div>
+</body>
+
+</html>
